@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div id="content">
+    <h1>MockPollo</h1>
+    <form [formGroup]="loginFormGroup" class="form" fxLayout="column" (ngSubmit)="verifyCredentials()">
+        
+        <mat-form-field appearance="outline">
+            <label for="username">Username</label>
+            <input matInput type="text" id="username" [formControl]="username" required/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <label for="password">Password</label>
+            <input matInput type="password" id="password" [formControl]="password" required/>
+        </mat-form-field>
+
+        <div fxLayoutAlign="center" fxLayout="row" fxLayoutGap="25px">
+            <div>
+                <button class="button" type="submit" mat-raised-button color="primary">Login</button>
+            </div>
+            <div>
+                <button class="button" mat-raised-button color="accent" [routerLink]="['/createAccount']">Create Account</button>
+            </div>
+        </div>
+    </form>
+
+</div>
