@@ -27,10 +27,10 @@ export class CreateAccountComponent implements OnInit {
     if (this.firstPass.value != this.secondPass.value || this.firstPass.value == '') {
       alert("The passwords do not match or are invalid, please enter a different password");
     } else {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['collectData']);
     }
   }
-  
+
   ngOnInit(): void {
   }
 
