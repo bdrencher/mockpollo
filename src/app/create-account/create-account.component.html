@@ -1,1 +1,25 @@
-<p>create-account works!</p>
+<div id="content">
+    <h1>Create Account</h1>
+    <form fxLayout="column" [formGroup]="createAccountForm" class="form" (ngSubmit)="createAccount()">
+
+        <mat-form-field appearance="outline">
+            <label for="newUsername">Username</label>
+            <input matInput type="text" [formControl]="username" required/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <label for="newPassword">Password</label>
+            <input matInput type="password" [formControl]="firstPass" required/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <label for="checkPassword">Re-enter password</label>
+            <input matInput type="password" [formControl]="secondPass" required/>
+        </mat-form-field>
+        
+        <div fxLayoutAlign="center" fxLayoutGap="3em">
+            <button class="button" type="submit" mat-raised-button>Confirm</button>
+            <button class="button" mat-raised-button [routerLink]="['']">Return to login</button>
+        </div>
+    </form>
+</div>
