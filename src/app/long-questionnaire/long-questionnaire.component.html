@@ -1,1 +1,41 @@
-<p>long-questionnaire works!</p>
+<div id="content">
+    <h1>Random Questionnaire</h1>
+    <div>
+        <p>Instructions: Answer the following questions in any way you want to
+        </p>
+        <button mat-stroked-button color="accent" [routerLink]="['/dashboard']">Return to Dashboard</button>
+    </div>
+    <ng-container>
+        <div class="form">
+            <mat-vertical-stepper [linear]="isLinear" #stepper>
+                <ng-template matStepperIcon="edit">
+                    <mat-icon>done</mat-icon>
+                </ng-template>
+                <div *ngFor="let question of questionsData; let i=index">
+                    <mat-step [editable]="isEditable">
+                        <ng-template matStepLabel>{{question.description}}</ng-template>
+                        <p>
+                            {{question.description}}
+                        </p>
+                        <div fxLayout="row" fxLayoutGap="6em">
+                            <p class="sliderLabel top" id="rarely" (click)="setSliderValue('rarely')">Disagree</p>
+                            <p class="sliderLabel top" id="frequently" (click)="setSliderValue('frequently')">Agree</p>
+                        </div>
+                        <mat-slider id="slider" step="25" tickInterval="1" [(ngModel)]="currentSelection"></mat-slider>
+                        <div fxLayout="row" fxLayoutGap="6em">
+                            <p class="sliderLabel bottom" id="never" (click)="setSliderValue('never')">Strongly<br>Disagree</p>
+                            <p class="sliderLabel bottom" id="sometimes" (click)="setSliderValue('sometimes')">Neither</p>
+                            <p class="sliderLabel bottom" id="always" (click)="setSliderValue('always')">Strongly<br>Agree</p>
+                        </div>
+                        <span *ngIf="i < questionsData.length - 1">
+                            <button mat-raised-button color="primary" matStepperNext (click)="getNextQuestion()">Next</button>
+                        </span>
+                        <span *ngIf="i == questionsData.length - 1">
+                            <button mat-raised-button color="primary" (click)="finish()">Done</button>
+                        </span>
+                    </mat-step>
+                </div>
+            </mat-vertical-stepper>
+        </div>
+    </ng-container>
+</div>
