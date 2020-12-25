@@ -12,6 +12,10 @@ import { DailyQuestionnaireComponent } from './daily-questionnaire/daily-questio
 import { DataDisplayComponent } from './data-display/data-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStep, MatStepperModule } from '@angular/material/stepper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

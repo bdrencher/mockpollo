@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./long-questionnaire.component.css']
 })
 export class LongQuestionnaireComponent implements OnInit {
+  isLinear = true;
 
   questionsData = [
     {description: "Dogs are better than cats"},
