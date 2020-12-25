@@ -13,7 +13,8 @@ import { DataDisplayComponent } from './data-display/data-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatStep, MatStepperModule } from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -34,6 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
