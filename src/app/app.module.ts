@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { CollectUserDataComponent } from './collect-user-data/collect-user-data.component';
 import { LongQuestionnaireComponent } from './long-questionnaire/long-questionnaire.component';
-import { ShortQuestionnaireComponent } from './short-questionnaire/short-questionnaire.component';
 import { DailyQuestionnaireComponent } from './daily-questionnaire/daily-questionnaire.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -24,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateAccountComponent,
     CollectUserDataComponent,
     LongQuestionnaireComponent,
-    ShortQuestionnaireComponent,
     DailyQuestionnaireComponent,
     DataDisplayComponent,
     DashboardComponent
