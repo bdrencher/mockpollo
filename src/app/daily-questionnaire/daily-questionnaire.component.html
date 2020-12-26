@@ -1,1 +1,33 @@
-<p>daily-questionnaire works!</p>
+<div id="contentBody">
+    <div>
+        <h2>Daily Journal</h2>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>Entry Date</mat-label>
+            <input matInput [formControl]="journalEntryDate" type="date" required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-tab-group>
+            <mat-tab label="Events">
+                <mat-form-field>
+                    <mat-label>Today's events</mat-label>
+                    <input matInput type="text" [formControl]="eventEntry">
+                </mat-form-field>
+            </mat-tab>
+            <mat-tab label="Weather">
+                <mat-form-field>
+                    <mat-label>Today's weather</mat-label>
+                    <input matInput type="text" [formControl]="weatherEntry">
+                </mat-form-field>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div *ngIf="journalEntryDate.value == undefined">
+        <button class="topSpace" mat-raised-button color="accent" disabled>Submit Journal Entry</button>
+    </div>
+    <div *ngIf="journalEntryDate.value != undefined">
+        <button class="topSpace" mat-raised-button color="accent" (click)="submitJournalEntry">Submit Journal Entry</button>
+    </div>
+</div>

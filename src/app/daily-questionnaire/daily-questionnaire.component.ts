@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-daily-questionnaire',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyQuestionnaireComponent implements OnInit {
 
-  constructor() { }
+  journalEntryDate: FormControl;
+  eventEntry: FormControl;
+  weatherEntry: FormControl;
+
+  constructor(private router: Router) { }
+
+  submitJournalEntry() {
+    this.router.navigate(['/dashboard'])
+  }
 
   ngOnInit(): void {
   }
