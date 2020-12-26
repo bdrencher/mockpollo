@@ -37,7 +37,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
