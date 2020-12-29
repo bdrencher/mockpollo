@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./long-questionnaire.component.css']
 })
 export class LongQuestionnaireComponent implements OnInit {
+  currentSelection = 0;
   isLinear = true;
+  isEditable = true;
 
-  questionsData = [
+  questionsData: any[] = [
     {description: "Dogs are better than cats"},
     {description: "Live christmas trees are better than fake ones"},
     {description: "Being too cold is better than being too hot"},
@@ -27,6 +29,25 @@ export class LongQuestionnaireComponent implements OnInit {
   ]
 
   constructor() { }
+
+
+
+  setSliderValue(selection) {
+    switch(selection) {
+      case 'stronglyDisagree': this.currentSelection = 0
+      break;
+      case 'disagree': this.currentSelection = 25
+      break;
+      case 'neither': this.currentSelection = 50
+      break;
+      case 'agree': this.currentSelection  = 75
+      break;
+      case 'stronglyAgree': this.currentSelection = 100
+      break;
+      default: 0
+      break;
+    }
+  }
 
   ngOnInit(): void {
   }

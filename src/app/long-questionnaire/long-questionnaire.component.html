@@ -28,7 +28,7 @@
                             <p class="sliderLabel bottom" id="always" (click)="setSliderValue('always')">Strongly<br>Agree</p>
                         </div>
                         <span *ngIf="i < questionsData.length - 1">
-                            <button mat-raised-button color="primary" matStepperNext (click)="getNextQuestion()">Next</button>
+                            <button mat-raised-button color="primary" matStepperNext>Next</button>
                         </span>
                         <span *ngIf="i == questionsData.length - 1">
                             <button mat-raised-button color="primary" (click)="finish()">Done</button>
