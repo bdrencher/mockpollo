@@ -1,4 +1,4 @@
-<div id="contentBody">
+<div id="content">
     <div>
         <h2>Daily Journal</h2>
     </div>
@@ -13,13 +13,13 @@
             <mat-tab label="Events">
                 <mat-form-field>
                     <mat-label>Today's events</mat-label>
-                    <input matInput type="text" [formControl]="eventEntry">
+                    <textarea matInput [formControl]="eventEntry"></textarea>
                 </mat-form-field>
             </mat-tab>
             <mat-tab label="Weather">
                 <mat-form-field>
                     <mat-label>Today's weather</mat-label>
-                    <input matInput type="text" [formControl]="weatherEntry">
+                    <textarea matInput [formControl]="weatherEntry"></textarea>
                 </mat-form-field>
             </mat-tab>
         </mat-tab-group>
@@ -28,6 +28,6 @@
         <button class="topSpace" mat-raised-button color="accent" disabled>Submit Journal Entry</button>
     </div>
     <div *ngIf="journalEntryDate.value != undefined">
-        <button class="topSpace" mat-raised-button color="accent" (click)="submitJournalEntry">Submit Journal Entry</button>
+        <button class="topSpace" mat-raised-button color="accent" [routerLink]="['/dashboard']">Submit Journal Entry</button>
     </div>
 </div>

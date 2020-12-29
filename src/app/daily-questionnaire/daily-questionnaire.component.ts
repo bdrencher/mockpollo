@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class DailyQuestionnaireComponent implements OnInit {
 
-  journalEntryDate: FormControl;
-  eventEntry: FormControl;
-  weatherEntry: FormControl;
+  journalEntryDate: FormControl = new FormControl();
+  eventEntry: FormControl = new FormControl();
+  weatherEntry: FormControl = new FormControl();
 
   constructor(private router: Router) { }
 
