@@ -1,5 +1,12 @@
 <div id="content">
     <div>
+        <h1>Data display</h1>
+        <p>An example of how to show complex data with chart.js</p>
+    </div>
+    <div class="bottomSpace">
+        <button mat-stroked-button color="accent" [routerLink]="['/']">Return to home page</button>
+    </div>
+    <div>
         <h3>Condensed Cumulative Chart</h3>
         <canvas #cumulativeChart>{{ cumulativeChart }}</canvas>
     </div>
