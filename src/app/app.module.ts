@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { CreateAccountComponent } from './create-account/create-account.component';
-import { CollectUserDataComponent } from './collect-user-data/collect-user-data.component';
 import { LongQuestionnaireComponent } from './long-questionnaire/long-questionnaire.component';
 import { DailyQuestionnaireComponent } from './daily-questionnaire/daily-questionnaire.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
@@ -23,9 +20,6 @@ import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    CreateAccountComponent,
-    CollectUserDataComponent,
     LongQuestionnaireComponent,
     DailyQuestionnaireComponent,
     DataDisplayComponent,
