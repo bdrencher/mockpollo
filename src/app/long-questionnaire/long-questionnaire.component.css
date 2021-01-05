@@ -1,0 +1,19 @@
+mat-slider {
+    width: 20em;
+}
+
+.sliderLabel {
+    font-size: small;
+}
+
+.sliderLabel:hover {
+    cursor: pointer;
+}
+
+.sliderLabel.top {
+    margin-bottom: -0.5em;
+}
+
+.sliderLabel.bottom {
+    margin-top: -0.5em;
+}

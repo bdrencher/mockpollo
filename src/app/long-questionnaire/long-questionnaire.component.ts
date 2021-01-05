@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-long-questionnaire',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./long-questionnaire.component.css']
 })
 export class LongQuestionnaireComponent implements OnInit {
-  currentSelection = 0;
+  currentSelection: FormControl = new FormControl();
   isLinear = true;
   isEditable = true;
 
@@ -34,15 +35,15 @@ export class LongQuestionnaireComponent implements OnInit {
 
   setSliderValue(selection) {
     switch(selection) {
-      case 'stronglyDisagree': this.currentSelection = 0
+      case 'stronglyDisagree': this.currentSelection.setValue(0)
       break;
-      case 'disagree': this.currentSelection = 25
+      case 'disagree': this.currentSelection.setValue(25)
       break;
-      case 'neither': this.currentSelection = 50
+      case 'neither': this.currentSelection.setValue(50)
       break;
-      case 'agree': this.currentSelection  = 75
+      case 'agree': this.currentSelection.setValue(75)
       break;
-      case 'stronglyAgree': this.currentSelection = 100
+      case 'stronglyAgree': this.currentSelection.setValue(100)
       break;
       default: 0
       break;
@@ -50,6 +51,6 @@ export class LongQuestionnaireComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.currentSelection.setValue(0);
   }
-
 }
