@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-long-questionnaire',
@@ -29,7 +30,7 @@ export class LongQuestionnaireComponent implements OnInit {
     {description: "Ice cream is better than cake"}
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
 
@@ -48,6 +49,11 @@ export class LongQuestionnaireComponent implements OnInit {
       default: 0
       break;
     }
+  }
+
+  finish() {
+    alert("your responses have been saved!");
+    this.router.navigate(['/']);
   }
 
   ngOnInit(): void {
